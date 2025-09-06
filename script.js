@@ -5,7 +5,7 @@ function pronounceWord(word) {
 }
 // Synonyms
 const synonymsArr = (arr) => {
-  const htmlElements = arr.map((el) => `<span class="btn border border-[#d7e4ef] rounded-md bg-[#edf7ff]">${el}</span>`);
+  const htmlElements = arr.map((el) => `<span class="btn border border-[#d7e4ef] mr-1 mt-2 rounded-md bg-[#edf7ff]">${el}</span>`);
   return htmlElements.join(' ');
 };
 
@@ -49,13 +49,17 @@ const displayWordDetails = (detail) => {
   const detailBox = document.getElementById('details-container');
   detailBox.innerHTML = `
         <div>
-            <h2 class="md:text-3xl text-2xl font-semibold"> ${detail.word} <span class="font-bangla">
-                (<i class="fa-solid fa-microphone-lines"></i>:${detail.pronunciation})</span>
+            <h2 class="md:text-3xl text-2xl font-semibold"> ${
+              detail.word ? detail.word : 'প্রদত্ত শব্দটি খুঁজে পাওয়া যায়নি।'
+            } <span class="font-bangla">
+                (<i class="fa-solid fa-microphone-lines"></i>:${
+                  detail.pronunciation ? detail.pronunciation : 'শব্দের উচ্চারণ খুঁজে পাওয়া যায়নি।'
+                })</span>
             </h2>
         </div>
         <div>
             <h2 class="text-xl font-semibold mb-1">Meaning</h2>
-            <p class="md:text-xl text-lg font-bangla">${detail.meaning}</p>
+            <p class="md:text-xl text-lg font-bangla">${detail.meaning ? detail.meaning : 'শব্দের অর্থ খুঁজে পাওয়া যায়নি।'}</p>
         </div>
         <div>
             <h2 class="text-xl font-semibold mb-1">Example</h2>
@@ -63,7 +67,7 @@ const displayWordDetails = (detail) => {
         </div>
         <div>
             <h2 class="md:text-xl text-lg font-semibold font-bangla mb-1">সমার্থক শব্দ গুলো</h2>
-            ${synonymsArr(detail.synonyms)}
+            <span> ${synonymsArr(detail.synonyms)} </span>
         </div>`;
   document.getElementById('my_modal_5').showModal();
 };
@@ -91,7 +95,9 @@ const displayLevelWord = (words) => {
         <h1 class="font-bold md:text-3xl text-2xl">${word.word ? word.word : 'প্রদত্ত শব্দটি খুঁজে পাওয়া যায়নি।'}</h1>
         <p class="text-xl">Meaning /Pronounciation</p>
         <h2 class="font-bangla font-semibold md:text-2xl text-xl text-[#18181B]">
-        "${word.meaning ? word.meaning : 'শব্দের অর্থ খুঁজে পাওয়া যায়নি।'} / ${word.pronunciation ? word.pronunciation : 'শব্দের উচ্চারণ খুঁজে পাওয়া যায়নি।'}"</h2>
+        "${word.meaning ? word.meaning : 'শব্দের অর্থ খুঁজে পাওয়া যায়নি।'} / ${
+      word.pronunciation ? word.pronunciation : 'শব্দের উচ্চারণ খুঁজে পাওয়া যায়নি।'
+    }"</h2>
         <div class="flex justify-between">
           <button onclick="loadWordDetail(${
             word.id
