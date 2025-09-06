@@ -173,17 +173,20 @@
 
       <!-- Let's Learn Vocabs -->
       <section id="lessons" class="w-11/12 mx-auto">
-        <h1 class="text-center mb-9 font-bold text-3xl md:text-4xl"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+        <h1 class="text-center mb-9 font-bold text-3xl md:text-4xl">
+          <span class="text-[#00BCFF]">Let's</span>
+          Learn Vocabularies
+        </h1>
         <div id="level-container" class="flex flex-wrap justify-center gap-5 mb-10"></div>
       </section>
       <!-- Search Field -->
-      <div class="join flex justify-center mb-5 w-11/12 mx-auto">
+      <div class="join flex justify-center mb-5 mx-auto max-w-lg w-full min-w-0">
         <div>
           <label class="input join-item">
-            <input id="input-search" type="text" placeholder="Type a word…" required />
+            <input id="input-search" class="flex-1 min-w-0" type="text" placeholder="Type a word…" required />
           </label>
         </div>
-        <button id="search-btn" class="btn btn-primary join-item">Search</button>
+        <button id="search-btn" class="btn btn-primary join-item whitespace-nowrap">Search</button>
       </div>
       <!-- Loading Icon -->
       <section id="loading" class="flex justify-center hidden my-20">
@@ -266,7 +269,10 @@
 
     <!-- footer -->
     <footer class="border-t-2 border-[#ffebeb]">
-      <div id="footer-container" class="flex flex-col md:flex-row justify-center md:justify-between  md:items-end space-y-4 md:space-y-0 w-11/12 mx-auto py-24">
+      <div
+        id="footer-container"
+        class="flex flex-col md:flex-row justify-center md:justify-between md:items-end space-y-4 md:space-y-0 w-11/12 mx-auto py-24"
+      >
         <!-- left div -->
         <div>
           <div class="flex">
