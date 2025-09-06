@@ -1,0 +1,20 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-bangla {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.active {
+  background-color: #422ad5;
+  color: whitesmoke;
+}
+
+.red {
+  border: 2px solid red;
+}

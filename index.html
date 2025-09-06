@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tittle And Logo -->
+    <title>English Janala | Best Platform for learning English</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DaisyUI And Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <header class="bg-[#BADEFF50] shadow-sm">
+      <div class="navbar md:w-11/12 mx-auto">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+              <li>
+                <a href="#faq" class="">
+                  <i class="fa-solid fa-circle-question"></i>
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#lessons" class="">
+                  <i class="fa-solid fa-book-open"></i>
+                  Learn
+                </a>
+              </li>
+              <li>
+                <a href="" class="">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  LogOut
+                </a>
+              </li>
+            </ul>
+          </div>
+          <span class="text-lg font-bold">English</span>
+          <img class="px-1" src="./assets/logo.png" alt="logo" />
+          <span class="text-lg font-semibold">জানালা</span>
+        </div>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 space-x-4 py-3">
+            <li>
+              <a href="#faq" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-circle-question"></i>
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#lessons" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-book-open"></i>
+                Learn
+              </a>
+            </li>
+            <li>
+              <a href="" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                LogOut
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="w-11/12 mx-auto flex flex-col-reverse md:flex-row items-center mb-32">
+        <!-- Left Container -->
+        <div class="flex-[50%] text-center md:text-left">
+          <!-- Texts -->
+          <div>
+            <h1 class="font-bold text-4xl md:text-5xl">
+              <span class="text-[#00BCFF]">English</span>
+              is Easy!!
+            </h1>
+            <p class="font-bangla mt-8 mb-9 text-2xl font-medium max-w-[727px]">
+              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে
+              নিয়ে যাবে অন্য একটি Level এ
+            </p>
+          </div>
+          <!-- Input Field UserName -->
+          <div>
+            <label class="input validator">
+              <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </g>
+              </svg>
+              <input
+                type="text"
+                required
+                placeholder="Enter Your Name"
+                pattern="[A-Za-z][A-Za-z0-9\-]*"
+                minlength="3"
+                maxlength="30"
+                title="Only letters, numbers or dash"
+              />
+            </label>
+            <p class="validator-hint">
+              Must be 3 to 30 characters
+              <br />
+              containing only letters, numbers or dash
+            </p>
+          </div>
+          <!-- Input Field Password -->
+          <div class="mt-[-25px]">
+            <label class="input validator">
+              <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                  <path
+                    d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+                  ></path>
+                  <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                </g>
+              </svg>
+              <input
+                type="password"
+                required
+                placeholder="Password"
+                minlength="8"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+              />
+            </label>
+            <p class="validator-hint hidden">
+              Must be more than 8 characters, including
+              <br />
+              At least one number
+              <br />
+              At least one lowercase letter
+              <br />
+              At least one uppercase letter
+            </p>
+          </div>
+          <button class="btn btn-primary mt-5">Get Started</button>
+        </div>
+        <!-- Right Container -->
+        <div class="flex-[40%]">
+          <img src="./assets/hero-student.png" alt="hero-student-pic" />
+        </div>
+      </section>
+
+      <!-- Let's Learn Vocabs -->
+      <section id="lessons" class="w-11/12 mx-auto">
+        <h1 class="text-center mb-9 font-bold text-4xl"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+        <div id="level-container" class="flex flex-wrap justify-center gap-5 mb-10"></div>
+      </section>
+      <!-- Search Field -->
+      <div class="join flex justify-center mb-5">
+        <div>
+          <label class="input join-item">
+            <input id="input-search" type="text" placeholder="Type a word…" required />
+          </label>
+        </div>
+        <button id="search-btn" class="btn btn-primary join-item">Search</button>
+      </div>
+      <!-- Loading Icon -->
+      <section id="loading" class="flex justify-center hidden my-20">
+        <span class="loading loading-bars loading-xl"></span>
+      </section>
+      <!-- Level Words -->
+      <section id="level-words" class="grid grid-cols-3 gap-7 w-11/12 mx-auto bg-[#F8F8F8] rounded-3xl mb-32 p-7">
+        <div class="my-16 col-span-full text-center space-y-3">
+          <p class="text-[#79716B] text-lg font-bangla">আপনি এখনো কোন Lesson Select করেননি!</p>
+          <h2 class="text-3xl font-semibold">
+            <span class="font-bangla">একটি</span>
+            <span class="text-[#3B25C1]">Lesson</span>
+            Select
+            <span class="font-bangla">করুন।</span>
+          </h2>
+        </div>
+      </section>
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="details-container" class="p-6 border-2 border-[#edf7ff] rounded-xl bg-white space-y-5"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a but ton in form, it will close the modal -->
+              <button class="btn bg-[#422ad5] text-white rounded-xl">Complete Learning</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!-- Frequently Asked Questions Section -->
+      <section id="faq" class="w-11/12 mx-auto mb-28">
+        <h1 class="text-4xl font-bold text-center mb-12">
+          <span class="text-[#00BCFF]">Frequently</span>
+          Asked Questions
+        </h1>
+        <div class="space-y-4">
+          <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
+            <div class="collapse-content text-sm text-[#62748E]">
+              You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide
+              you step by step.
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">2. Is this website free to use?</div>
+            <div class="collapse-content text-sm text-[#62748E]">
+              Yes! You can start learning for free with our beginner lessons. Some advanced courses may require a subscription, but the
+              basic features are always free.
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+            <div class="collapse-content text-sm text-[#62748E]">
+              Creating an account is optional for basic practice. However, if you want to save your progress, unlock quizzes, and track your
+              learning journey, we recommend signing up.
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+            <div class="collapse-content text-sm text-[#62748E]">
+              Our lessons include vocabulary lists, daily practice words, and interactive flashcards. You can also try the “Search” feature
+              to learn the meaning and usage of any word instantly.
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+            <div class="collapse-content text-sm text-[#62748E]">
+              Yes! After completing certain structured courses, you’ll receive a digital certificate that you can download and share.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="border-t-2 border-[#ffebeb]">
+      <div id="footer-container" class="flex justify-between items-end w-11/12 mx-auto py-24">
+        <!-- left div -->
+        <div>
+          <div class="flex">
+            <span class="text-lg font-bold">English</span>
+            <img class="px-1" src="./assets/logo.png" alt="logo" />
+            <span class="text-lg font-semibold">জানালা</span>
+          </div>
+          <div>
+            <h2 class="font-bangla text-lg font-semibold my-1">ইংরেজি শিখুন সহজে</h2>
+            <p>Providing ED-Tech Applications since 2025</p>
+          </div>
+        </div>
+        <!-- right div -->
+        <div>
+          <p class="text-[#18181B] mb-2">Follow Us</p>
+          <a href="https://www.facebook.com/mahdi916" target="_blank">
+            <i class="fa-brands fa-facebook text-xl"></i>
+          </a>
+          <a href="https://www.youtube.com/@ProgrammingHeroCommunity" target="_blank"><i class="fa-brands fa-youtube text-xl"></i></a>
+          <a href="https://www.instagram.com/rifu91629/" target="_blank"><i class="fa-brands fa-square-instagram text-xl"></i></a>
+          <a href="https://github.com/mahdi9162?tab=repositories" target="_blank"><i class="fa-brands fa-github text-xl"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
