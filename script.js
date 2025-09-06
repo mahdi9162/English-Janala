@@ -90,7 +90,7 @@ const displayLevelWord = (words) => {
         <div class="bg-white py-14 px-12 text-center rounded-xl space-y-4 shadow-sm">
         <h1 class="font-bold text-3xl">${word.word ? word.word : 'প্রদত্ত শব্দটি খুঁজে পাওয়া যায়নি।'}</h1>
         <p class="text-xl">Meaning /Pronounciation</p>
-        <h2 class="font-bangla font-semibold text-2xl text-[#18181B]">
+        <h2 class="font-bangla font-semibold md:text-2xl text-xl text-[#18181B]">
         "${word.meaning ? word.meaning : 'শব্দের অর্থ খুঁজে পাওয়া যায়নি।'} / ${
       word.pronunciation ? word.pronunciation : 'শব্দের উচ্চারণ খুঁজে পাওয়া যায়নি।'
     }"</h2>
@@ -181,7 +181,7 @@ searchBtn.addEventListener('click', () => {
         <h2 class="text-3xl font-semibold font-bangla">
         দুঃখিত, শব্দটি খুঁজে পাওয়া গেল না!😟
         </h2>
-      </div>`; 
+      </div>`;
         } else {
           displayLevelWord(filterWord);
         }
