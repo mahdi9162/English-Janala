@@ -49,20 +49,20 @@ const displayWordDetails = (detail) => {
   const detailBox = document.getElementById('details-container');
   detailBox.innerHTML = `
         <div>
-            <h2 class="text-3xl font-semibold"> ${detail.word} <span class="font-bangla">
+            <h2 class="md:text-3xl text-2xl font-semibold"> ${detail.word} <span class="font-bangla">
                 (<i class="fa-solid fa-microphone-lines"></i>:${detail.pronunciation})</span>
             </h2>
         </div>
         <div>
             <h2 class="text-xl font-semibold mb-1">Meaning</h2>
-            <p class="text-xl font-bangla">${detail.meaning}</p>
+            <p class="md:text-xl text-lg font-bangla">${detail.meaning}</p>
         </div>
         <div>
             <h2 class="text-xl font-semibold mb-1">Example</h2>
-            <p class="text-lg">${detail.sentence}</p>
+            <p class="md:text-lg text-sm">${detail.sentence}</p>
         </div>
         <div>
-            <h2 class="text-xl font-semibold font-bangla mb-1">সমার্থক শব্দ গুলো</h2>
+            <h2 class="md:text-xl text-lg font-semibold font-bangla mb-1">সমার্থক শব্দ গুলো</h2>
             ${synonymsArr(detail.synonyms)}
         </div>`;
   document.getElementById('my_modal_5').showModal();
@@ -88,12 +88,10 @@ const displayLevelWord = (words) => {
     const card = document.createElement('div');
     card.innerHTML = `
         <div class="bg-white py-14 px-12 text-center rounded-xl space-y-4 shadow-sm">
-        <h1 class="font-bold text-3xl">${word.word ? word.word : 'প্রদত্ত শব্দটি খুঁজে পাওয়া যায়নি।'}</h1>
+        <h1 class="font-bold md:text-3xl text-2xl">${word.word ? word.word : 'প্রদত্ত শব্দটি খুঁজে পাওয়া যায়নি।'}</h1>
         <p class="text-xl">Meaning /Pronounciation</p>
         <h2 class="font-bangla font-semibold md:text-2xl text-xl text-[#18181B]">
-        "${word.meaning ? word.meaning : 'শব্দের অর্থ খুঁজে পাওয়া যায়নি।'} / ${
-      word.pronunciation ? word.pronunciation : 'শব্দের উচ্চারণ খুঁজে পাওয়া যায়নি।'
-    }"</h2>
+        "${word.meaning ? word.meaning : 'শব্দের অর্থ খুঁজে পাওয়া যায়নি।'} / ${word.pronunciation ? word.pronunciation : 'শব্দের উচ্চারণ খুঁজে পাওয়া যায়নি।'}"</h2>
         <div class="flex justify-between">
           <button onclick="loadWordDetail(${
             word.id
